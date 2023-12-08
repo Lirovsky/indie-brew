@@ -1,0 +1,181 @@
+:root {
+    --var-1: #664efc;
+    --var-2: #e8e6e6;
+    --var-3: #fff;
+}
+
+/* GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9eef9;
+    color: #000;
+}
+.max-width {
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.header-top .logo {
+    width: 120px;
+}
+.header-top .back {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-top .back a {
+    background-color: var(--var-3);
+    padding: 8px 13px 5px 10px;
+    border: 1px solid var(--var-2);
+    border-radius: 5px;
+    transition: all.5s;
+}
+.header-top .back a:hover {
+    transform: scale(1.1);
+}
+.header-top .back p {
+    font-size: 16px;
+    font-weight: bold;
+}
+@media (max-width: 480px) {
+    .header-top .back p {
+        display: none;
+    }
+}
+
+.section-1 .signup {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.signup .left {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    padding-right: 3rem;
+}
+.signup .left h1 {
+    font-size: 30px;
+}
+.signup .left .paragraph{
+    display: flex;
+    gap: 10px;
+}
+.signup .left .paragraph .emoji{
+    font-size: 20px;
+}
+.signup .left .paragraph p{
+    font-size: 17px;
+}
+.signup .left .paragraph p span{
+    font-weight: bold;
+}
+
+.signup .right {
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    background-color: var(--var-3);
+    border-radius: 10px;
+}
+.signup .right div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+}
+.signup .right h3 {
+    font-size: 25px;
+}
+.signup .right form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.signup .right form label{
+    font-size: 18px;
+    font-weight: bold;
+}
+.signup .right form input{
+    margin: 5px 0 25px 0;
+    font-size: 15px;
+    padding: 15px;
+    border: 1px solid var(--var-2);
+    border-radius: 5px;
+}
+.signup .right form .terms input[type="checkbox"] {
+    width: 15px;
+    height: 17px;
+    margin: 5px;
+}
+.signup .right form .terms label{
+    font-size: 18px;
+    font-weight: normal;
+}
+.signup .right form .terms a{
+    color: var(--var-1);
+    text-decoration: underline;
+}
+.signup .right form .btn{
+    margin: 2rem 0 0 0;
+    width: 100%;
+    background-color: var(--var-1);
+    color: var(--var-3);
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+    border: 1px solid transparent;
+    transition: all .5s;
+}
+.signup .right form .btn:hover{
+    background-color: transparent;
+    color: var(--var-1);
+    border: 1px solid var(--var-1) ;
+}
+
+@media (max-width: 850px) {
+    .section-1 .signup {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .signup .left {
+        gap: 25px;
+        width: 100%;
+        padding-right: 0;
+    }
+    .signup .right {
+        padding: 4rem;
+    }
+}
+@media (max-width: 480px) {
+    .signup .left h1 {
+        font-size: 25px;
+    }
+    .signup .right {
+        padding: 2rem;
+    }
+    .signup .right h3 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 300px) {
+    .signup .right {
+        padding: .5rem;
+    }
+}
